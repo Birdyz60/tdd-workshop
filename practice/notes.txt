@@ -1,13 +1,29 @@
 reqs
 4 types of dice result: blank, surge, hit, crit
-blanks aren't hits, crits and hits are
+blanks, surges aren't wounds, crits and hits are
 func takes an array  results (enum)
 and an options object
 if surge to crit, convert all surges to crit
 if surge to hit, convert all surges to hits
 if cover 1, remove 1 hit
 if cover 2, remove 2 hits
+crtis bypass cover
 if defender has armor, remove all hits
 if attack has impact X & defender has armor, convert X hits to crit AFTER cover
 if attack has sharpshooter 1, reduce cover by 1
 if attack has sharpshooter 2, reduce cover by 2
+
+
+demandes
+4 types de résultats de dés : vide, surtension, coup, critique
+les blancs ne sont pas des coups, les critiques et les coups sont
+func prend un tableau de résultats (enum)
+et un objet options
+si surtension à critique, convertir toutes les surtensions en critique
+si la surtension frappe, convertit toutes les surtensions en hits
+si couverture 1, retirer 1 touche
+si couverture 2, retirer 2 touches
+si le défenseur a une armure, supprimez tous les coups
+si l'attaque a un impact X et que le défenseur a une armure, convertissez X coups en coups critiques APRÈS la couverture
+si l'attaque a un tireur d'élite 1, réduire la couverture de 1
+si l'attaque a un tireur d'élite 2, réduire la couverture de 2

@@ -11,7 +11,7 @@ describe('MessagesComponent', () => {
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ MessagesComponent ],
+      declarations: [MessagesComponent],
       providers: [HeroService]
     })
 
@@ -25,5 +25,16 @@ describe('MessagesComponent', () => {
     expect(component).toBeTruthy();
   });
 
+  it(`should have a ul with zero li's`, () => {
+    expect(fixture.debugElement.query(By.css('ul'))).not.toBeNull();
+    expect(fixture.debugElement.queryAll(By.css('li')).length).toBe(0);
+  });
 
+  it(`should a ul with one li when there is one message`, () => {
+    component.heroSvc.getHeroes();
+    fixture.detectChanges();
+    expect(fixture.debugElement.queryAll(By.css('li')).length).toBe(1);
+  })
+
+  // Arret à 41`40
 });
